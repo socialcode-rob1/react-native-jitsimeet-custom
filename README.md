@@ -2,6 +2,9 @@
 
 React Native Wrapper for Jitsi Meet SDK.
 
+## Deprecated
+This package is deprecated and will no longer receive any updates. I recommend checking out https://github.com/skrafft/react-native-jitsi-meet
+
 ## Install
 
 ```sh
