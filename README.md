@@ -1,9 +1,17 @@
 # React Native JitsiMeet
 
-React Native Wrapper for Jitsi Meet SDK.
+React Native Wrapper for Jitsi Meet SDK based on https://github.com/skrafft/react-native-jitsi-meet
 
-## Deprecated
-This package is deprecated and will no longer receive any updates. I recommend checking out https://github.com/skrafft/react-native-jitsi-meet
+# Version
+
+| Jitsi Meet iOS SDK | Android SDK |
+|--------------------|-------------|
+| 5.1.1              | 5.1.0       |
+
+https://jitsi.github.io/handbook/docs/intro 
+https://cocoapods.org/pods/JitsiMeetSDK
+
+https://github.com/jitsi/jitsi-meet-sdk-samples
 
 ## Install
 
