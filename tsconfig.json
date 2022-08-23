@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@bortolilucas/react-native-jitsimeet": ["./src/index"]
+      "@socialcode-rob1/react-native-jitsimeet-custom": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

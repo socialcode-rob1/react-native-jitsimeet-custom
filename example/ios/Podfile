@@ -12,7 +12,7 @@ target 'JitsiMeetExample' do
     :hermes_enabled => false
   )
 
-  pod 'react-native-jitsimeet', :path => '../..'
+  pod 'react-native-jitsimeet-custom', :path => '../..'
 
   # Enables Flipper.
   #

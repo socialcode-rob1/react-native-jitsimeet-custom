@@ -1,14 +1,19 @@
-# React Native JitsiMeet
+# React Native JitsiMeet Custom
 
-React Native Wrapper for Jitsi Meet SDK based on https://github.com/skrafft/react-native-jitsi-meet
+React Native Wrapper for Jitsi Meet SDK based on 
+- https://github.com/skrafft/react-native-jitsi-meet
+- https://github.com/bortolilucas/react-native-jitsimeet
 
 # Version
 
-| Jitsi Meet iOS SDK | Android SDK |
-|--------------------|-------------|
-| 5.1.1              | 5.1.0       |
+Jitsi Meet Native SDKs Implemented
+
+| iOS SDK | Android SDK |
+|---------|-------------|
+| 5.1.1   | 5.1.0       |
 
 https://jitsi.github.io/handbook/docs/intro 
+
 https://cocoapods.org/pods/JitsiMeetSDK
 
 https://github.com/jitsi/jitsi-meet-sdk-samples
@@ -16,11 +21,11 @@ https://github.com/jitsi/jitsi-meet-sdk-samples
 ## Install
 
 ```sh
-yarn add @bortolilucas/react-native-jitsimeet
+yarn add @socialcode-rob1/react-native-jitsimeet
 
 or
 
-npm i --save @bortolilucas/react-native-jitsimeet
+npm i --save @socialcode-rob1/react-native-jitsimeet
 ```
 
 ## Usage
@@ -31,7 +36,7 @@ The package can be invoked in two modes
 2. As a RN View
 
 ```jsx
-import JitsiMeet, { JitsiMeetView } from '@bortolilucas/react-native-jitsimeet';
+import JitsiMeet, { JitsiMeetView } from '@socialcode-rob1/react-native-jitsimeet-custom';
 import React, { useState } from 'react';
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
@@ -342,7 +347,7 @@ On iOS it requires a few extra steps. Set the flag `screenSharingEnabled` to tru
 1.) Clone this project
 
 ```bash
-git clone https://github.com/bortolilucas/react-native-jitsimeet.git
+git clone https://github.com/socialcode-rob1/react-native-jitsimeet.git
 ```
 
 2.) Navigate to the project folder
@@ -372,7 +377,7 @@ yarn example android
 If your having problems with `duplicate_classes` errors, try exclude them from the react-native-jitsimeet project implementation with the following code:
 
 ```groovy
-implementation(project(':bortolilucas_react-native-jitsimeet')) {
+implementation(project(':socialcode-rob1_react-native-jitsimeet-custom')) {
   // Un-comment below if using hermes
   exclude group: 'com.facebook',module:'hermes'
   // Un-comment any packages below that you have added to your project to prevent `duplicate_classes` errors

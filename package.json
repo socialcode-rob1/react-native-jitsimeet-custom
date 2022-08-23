@@ -1,5 +1,5 @@
 {
-  "name": "@bortolilucas/react-native-jitsimeet",
+  "name": "@socialcode-rob1/react-native-jitsimeet-custom",
   "version": "2.3.1",
   "description": "React native Wrapper for Jitsi Meet SDK",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-jitsimeet.podspec",
+    "react-native-jitsimeet-custom.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -39,15 +39,15 @@
     "meet",
     "sdk"
   ],
-  "repository": "https://github.com/bortolilucas/react-native-jitsimeet",
-  "author": "Lucas Bortoli <lucasbortolidev@gmail.com> (https://github.com/bortolilucas)",
+  "repository": "https://github.com/socialcode-rob1/react-native-jitsimeet-custom",
+  "author": "socialcode-rob1 <robbassani@gmail.com> (https://github.com/socialcode-rob1)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bortolilucas/react-native-jitsimeet/issues"
+    "url": "https://github.com/socialcode-rob1/react-native-jitsimeet-custom/issues"
   },
-  "homepage": "https://github.com/bortolilucas/react-native-jitsimeet#readme",
+  "homepage": "https://github.com/socialcode-rob1/react-native-jitsimeet-custom#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://npm.pkg.github.com/socialcode-rob1",
     "access": "public"
   },
   "devDependencies": {
