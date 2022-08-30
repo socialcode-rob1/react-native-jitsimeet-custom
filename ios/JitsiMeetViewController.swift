@@ -13,6 +13,14 @@ class JitsiMeetViewController: UIViewController {
     
     view = jitsiMeetView
   }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
 
 extension JitsiMeetViewController: JitsiMeetViewDelegate {
