@@ -74,7 +74,7 @@ PODS:
   - Giphy (2.1.20):
     - libwebp
   - glog (0.3.5)
-  - JitsiMeetSDK (5.1.1):
+  - JitsiMeetSDK (6.0.0):
     - Giphy (= 2.1.20)
     - JitsiWebRTC (= 100.0.0)
   - JitsiWebRTC (100.0.0)
@@ -288,7 +288,7 @@ PODS:
   - React-logger (0.66.4):
     - glog
   - react-native-jitsimeet-custom (2.3.2):
-    - JitsiMeetSDK (= 5.1.1)
+    - JitsiMeetSDK (= 6.0.0)
     - React-Core
   - React-perflogger (0.66.4)
   - React-RCTActionSheet (0.66.4):
@@ -518,7 +518,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
   glog: 5337263514dd6f09803962437687240c5dc39aa4
-  JitsiMeetSDK: 1e9ebbad89912e271b781be0dd72ef94b33d0c47
+  JitsiMeetSDK: eb005a7fdc61cd8ec0144dacef9a85738808bd6c
   JitsiWebRTC: 873becc5a3edd1adebe86303ee5d36aab4f7fcc3
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
@@ -535,7 +535,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 94ce921e1d8ce7023366873ec371f3441383b396
   React-jsinspector: d0374f7509d407d2264168b6d0fad0b54e300b85
   React-logger: 933f80c97c633ee8965d609876848148e3fef438
-  react-native-jitsimeet-custom: 1b1331426251f64189b1dcf66eb5bbeb6d6caa0e
+  react-native-jitsimeet-custom: ec02fb0ea27c7644a3dcdc44b233de68330f65af
   React-perflogger: 93075d8931c32cd1fce8a98c15d2d5ccc4d891bd
   React-RCTActionSheet: 7d3041e6761b4f3044a37079ddcb156575fb6d89
   React-RCTAnimation: 743e88b55ac62511ae5c2e22803d4f503f2a3a13
