@@ -7,11 +7,12 @@ class JitsiMeetViewController: UIViewController {
   var jitsiMeetView = JitsiMeetView()
 
   override func viewDidLoad() {
-    
+    super.viewDidLoad()
     jitsiMeetView.join(conferenceOptions)
     jitsiMeetView.delegate = self
-    
-    view = jitsiMeetView
+
+    jitsiMeetView.frame = CGRect.init(x: 0, y: 44, width: self.view.frame.width, height: self.view.frame.height - 78)
+    self.view.addSubview(jitsiMeetView)
   }
     
     override func viewDidDisappear(_ animated: Bool) {
