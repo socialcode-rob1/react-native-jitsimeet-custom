@@ -4,6 +4,9 @@ React Native Wrapper for Jitsi Meet SDK based on
 - https://github.com/skrafft/react-native-jitsi-meet
 - https://github.com/bortolilucas/react-native-jitsimeet (deprecated)
 
+Key Dependency 
+- https://github.com/jitsi/jitsi-meet-release-notes
+
 # Version
 
 Jitsi Meet Native SDKs Implemented
