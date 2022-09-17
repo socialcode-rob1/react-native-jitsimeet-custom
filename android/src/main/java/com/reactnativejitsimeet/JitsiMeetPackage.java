@@ -23,7 +23,7 @@ public class JitsiMeetPackage implements ReactPackage {
   @Override
   public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
     List<ViewManager> modules = new ArrayList<>();
-    modules.add(new JitsiMeetViewManager(reactContext));
+//    modules.add(new JitsiMeetViewManager(reactContext));
     return modules;
   }
 }
