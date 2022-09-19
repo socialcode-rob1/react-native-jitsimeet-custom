@@ -19,7 +19,7 @@ class JitsiMeetViewController: UIViewController {
     
     @objc func onOrientationChange() {
         let isPortrait = UIApplication.shared.statusBarOrientation.isPortrait
-        jitsiMeetView.frame = CGRect.init(x: 0, y: isPortrait ? 44 : 0, width: self.view.frame.width, height: self.view.frame.height - ( isPortrait ? 78 : 34 ))
+        jitsiMeetView.frame = CGRect.init(x: 0, y: isPortrait ? 44 : 0, width: self.view.frame.width, height: self.view.frame.height - ( isPortrait ? 78 : 10 ))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
