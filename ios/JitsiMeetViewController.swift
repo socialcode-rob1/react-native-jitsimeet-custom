@@ -10,10 +10,17 @@ class JitsiMeetViewController: UIViewController {
     super.viewDidLoad()
     jitsiMeetView.join(conferenceOptions)
     jitsiMeetView.delegate = self
+      
+    NotificationCenter.default.addObserver(self, selector: #selector(onOrientationChange), name: UIApplication.didChangeStatusBarOrientationNotification, object: nil)
 
-    jitsiMeetView.frame = CGRect.init(x: 0, y: 44, width: self.view.frame.width, height: self.view.frame.height - 78)
+    onOrientationChange()
     self.view.addSubview(jitsiMeetView)
   }
+    
+    @objc func onOrientationChange() {
+        let isPortrait = UIApplication.shared.statusBarOrientation.isPortrait
+        jitsiMeetView.frame = CGRect.init(x: 0, y: isPortrait ? 44 : 0, width: self.view.frame.width, height: self.view.frame.height - ( isPortrait ? 78 : 34 ))
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.setNeedsStatusBarAppearanceUpdate()
