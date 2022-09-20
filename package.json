@@ -1,6 +1,6 @@
 {
   "name": "@socialcode-rob1/react-native-jitsimeet-custom",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "React native Wrapper for Jitsi Meet SDK",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
