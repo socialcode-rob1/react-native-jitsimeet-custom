@@ -40,6 +40,7 @@ extension JitsiMeetViewController: JitsiMeetViewDelegate {
       
     if ((resolver) != nil) {
       resolver!([])
+      resolver = nil
     }
   }
 }
