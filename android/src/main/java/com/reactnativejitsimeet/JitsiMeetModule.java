@@ -40,11 +40,11 @@ public class JitsiMeetModule extends ReactContextBaseJavaModule {
     return NAME;
   }
 
-  @ReactMethod
-  public void hangUp() {
-    Intent hangUpBroadcastIntent = new Intent("org.jitsi.meet.HANG_UP");
-    LocalBroadcastManager.getInstance(getReactApplicationContext()).sendBroadcast(hangUpBroadcastIntent);
-  }
+//  @ReactMethod
+//  public void hangUp() {
+//    Intent hangUpBroadcastIntent = new Intent("org.jitsi.meet.HANG_UP");
+//    LocalBroadcastManager.getInstance(getReactApplicationContext()).sendBroadcast(hangUpBroadcastIntent);
+//  }
 
   @ReactMethod
   public void launchJitsiMeetView(ReadableMap options, Promise onConferenceTerminated) {
@@ -105,7 +105,7 @@ public class JitsiMeetModule extends ReactContextBaseJavaModule {
     if (options.hasKey("audioMuted")) {
       builder.setAudioMuted(options.getBoolean("audioMuted"));
     }
-    
+
     if (options.hasKey("videoMuted")) {
       builder.setVideoMuted(options.getBoolean("videoMuted"));
     }
