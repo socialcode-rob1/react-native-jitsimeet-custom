@@ -28,9 +28,9 @@
     "prepare": "bob build",
     "release": "release-it",
     "publish": "yarn bootstrap && yarn prepare && npm publish",
-    "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "demo": "yarn --cwd demo",
+    "pods": "cd demo && pod-install --quiet",
+    "bootstrap": "yarn demo && yarn && yarn pods"
   },
   "keywords": [
     "react-native",
@@ -79,7 +79,7 @@
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
+      "<rootDir>/demo/node_modules",
       "<rootDir>/lib/"
     ]
   },

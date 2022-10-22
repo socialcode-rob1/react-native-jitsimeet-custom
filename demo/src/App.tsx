@@ -1,8 +1,6 @@
-import JitsiMeet, {
-  JitsiMeetView,
-} from '@socialcode-rob1/react-native-jitsimeet-custom';
-import React, { useState } from 'react';
-import { StyleSheet, View, Pressable, Text } from 'react-native';
+import JitsiMeet from '@socialcode-rob1/react-native-jitsimeet-custom';
+import React from 'react';
+import {StyleSheet, View, Pressable, Text} from 'react-native';
 
 const conferenceOptions = {
   room: 'ReactNativeJitsiRoom',
@@ -17,10 +15,10 @@ const conferenceOptions = {
 };
 
 function App() {
-  const [showJitsiView, setShowJitsiView] = useState(false);
+  // const [showJitsiView, setShowJitsiView] = useState(false);
 
   const startJitsiAsNativeController = async () => {
-    /* 
+    /*
       Mode 1 - Starts a new Jitsi Activity/UIViewController on top of RN Application (outside of JS).
       It doesn't require rendering JitsiMeetView Component.
     */
@@ -33,40 +31,35 @@ function App() {
     */
   };
 
-  if (showJitsiView) {
-    /* Mode 2 - Starts Jitsi as a RN View */
+  // if (showJitsiView) {
+  //   /* Mode 2 - Starts Jitsi as a RN View */
 
-    return (
-      <JitsiMeetView
-        style={styles.jitsiMeetView}
-        options={conferenceOptions}
-        onConferenceTerminated={(_) => setShowJitsiView(false)}
-        onConferenceJoined={(e) => console.log(e.nativeEvent)}
-        onConferenceWillJoin={(e) => console.log(e.nativeEvent)}
-      />
-    );
-  }
+  //   return (
+  //     <JitsiMeetView
+  //       style={styles.jitsiMeetView}
+  //       options={conferenceOptions}
+  //       onConferenceTerminated={_ => setShowJitsiView(false)}
+  //       onConferenceJoined={e => console.log(e.nativeEvent)}
+  //       onConferenceWillJoin={e => console.log(e.nativeEvent)}
+  //     />
+  //   );
+  // }
 
   return (
     <View style={styles.container}>
       <Pressable
         onPress={startJitsiAsNativeController}
-        style={({ pressed }) => [
-          styles.pressable,
-          { opacity: pressed ? 0.5 : 1 },
-        ]}
-      >
+        style={({pressed}) => [styles.pressable, {opacity: pressed ? 0.5 : 1}]}>
         <Text style={styles.pressableText}>
           Start Jitsi on top of RN Application
         </Text>
       </Pressable>
       <Pressable
-        onPress={() => setShowJitsiView(true)}
-        style={({ pressed }) => [
-          styles.pressable,
-          { opacity: pressed ? 0.5 : 1 },
-        ]}
-      >
+        disabled
+        onPress={() =>
+          console.log('Needs to be reimplemented on Android first.')
+        }
+        style={({pressed}) => [styles.pressable, {opacity: pressed ? 0.5 : 1}]}>
         <Text style={styles.pressableText}>Start Jitsi as a RN View</Text>
       </Pressable>
     </View>

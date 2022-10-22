@@ -72,8 +72,23 @@ PODS:
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
+  - Giphy (2.1.20):
+    - libwebp
   - glog (0.3.5)
+  - JitsiMeetSDK (6.0.0):
+    - Giphy (= 2.1.20)
+    - JitsiWebRTC (= 100.0.0)
+  - JitsiWebRTC (100.0.0)
   - libevent (2.1.12)
+  - libwebp (1.2.3):
+    - libwebp/demux (= 1.2.3)
+    - libwebp/mux (= 1.2.3)
+    - libwebp/webp (= 1.2.3)
+  - libwebp/demux (1.2.3):
+    - libwebp/webp
+  - libwebp/mux (1.2.3):
+    - libwebp/demux
+  - libwebp/webp (1.2.3)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.06.28.00-v2):
     - boost
@@ -282,6 +297,9 @@ PODS:
   - React-jsinspector (0.68.3)
   - React-logger (0.68.3):
     - glog
+  - react-native-jitsimeet-custom (2.4.4):
+    - JitsiMeetSDK (= 6.0.0)
+    - React-Core
   - React-perflogger (0.68.3)
   - React-RCTActionSheet (0.68.3):
     - React-Core/RCTActionSheetHeaders (= 0.68.3)
@@ -395,6 +413,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-jitsimeet-custom (from `../..`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -422,7 +441,11 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
+    - Giphy
+    - JitsiMeetSDK
+    - JitsiWebRTC
     - libevent
+    - libwebp
     - OpenSSL-Universal
     - SocketRocket
     - YogaKit
@@ -464,6 +487,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-jitsimeet-custom:
+    :path: "../.."
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -507,8 +532,12 @@ SPEC CHECKSUMS:
   Flipper-RSocket: d9d9ade67cbecf6ac10730304bf5607266dd2541
   FlipperKit: cbdee19bdd4e7f05472a66ce290f1b729ba3cb86
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
+  Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
   glog: 476ee3e89abb49e07f822b48323c51c57124b572
+  JitsiMeetSDK: eb005a7fdc61cd8ec0144dacef9a85738808bd6c
+  JitsiWebRTC: 873becc5a3edd1adebe86303ee5d36aab4f7fcc3
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
+  libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 4d8508a426467c48885f1151029bc15fa5d7b3b8
   RCTRequired: b8caca023d386d43740dfb94c2cf68f695fa5e77
@@ -523,6 +552,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: a5043e9e1e1bd13b80b58b228c6901b3721a4f54
   React-jsinspector: 86e89b9f135787a2e8eb74b3fc00ec61e9a80ae1
   React-logger: f790bd10f86b38012e108fb4b564023602702270
+  react-native-jitsimeet-custom: edce8d91042d1ae350aa099b2cedcda28e3cfb18
   React-perflogger: fa15d1d29ff7557ee25ea48f7f59e65896fb3215
   React-RCTActionSheet: e83515333352a3cc19c146e3c7a63a8a9269da8f
   React-RCTAnimation: 8032daa2846e3db7ac28c4c5a207d0bfb5e1e3ad
@@ -539,6 +569,6 @@ SPEC CHECKSUMS:
   Yoga: 2f6a78c58dcc2963bd8e34d96a4246d9dff2e3a7
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 9f067d3b1e9375b7d1bb5b8c8a080555de5c0ca1
+PODFILE CHECKSUM: 9f8f28033978bb04c3b0298191856bffac01d857
 
 COCOAPODS: 1.11.3

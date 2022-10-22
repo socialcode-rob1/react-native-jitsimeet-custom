@@ -79,6 +79,8 @@ import org.apache.tools.ant.taskdefs.condition.Os
  */
 
 project.ext.react = [
+    entryFile: "index.js",
+    bundleAssetName: "app.bundle",
     enableHermes: false,  // clean and rebuild if changing
 ]
 
@@ -287,6 +289,8 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    implementation project(':reactnativejitsimeet')
 }
 
 if (isNewArchitectureEnabled()) {
