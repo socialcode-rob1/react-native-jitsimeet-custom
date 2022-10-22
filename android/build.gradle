@@ -19,10 +19,10 @@ def safeExtGet(prop, fallback) {
 
 android {
     compileSdkVersion safeExtGet('JitsiMeet_compileSdkVersion', 31)
-    buildToolsVersion safeExtGet('JitsiMeet_buildToolsVersion', '30.0.2')
+    buildToolsVersion safeExtGet('JitsiMeet_buildToolsVersion', '31.0.0')
     defaultConfig {
         minSdkVersion safeExtGet('JitsiMeet_minSdkVersion', 24)
-        targetSdkVersion safeExtGet('JitsiMeet_targetSdkVersion', 30)
+        targetSdkVersion safeExtGet('JitsiMeet_targetSdkVersion', 31)
         versionCode 1
         versionName "1.0"
 
