@@ -41,7 +41,7 @@ android/.project
 
 # Cocoapods
 #
-example/ios/Pods
+demo/ios/Pods
 
 # node.js
 #
