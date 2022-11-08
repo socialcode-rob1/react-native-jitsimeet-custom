@@ -75,10 +75,10 @@ PODS:
   - Giphy (2.1.20):
     - libwebp
   - glog (0.3.5)
-  - JitsiMeetSDK (6.0.0):
+  - JitsiMeetSDK (6.2.2):
     - Giphy (= 2.1.20)
-    - JitsiWebRTC (= 100.0.0)
-  - JitsiWebRTC (100.0.0)
+    - JitsiWebRTC (~> 106.0)
+  - JitsiWebRTC (106.0.0)
   - libevent (2.1.12)
   - libwebp (1.2.3):
     - libwebp/demux (= 1.2.3)
@@ -298,7 +298,7 @@ PODS:
   - React-logger (0.68.3):
     - glog
   - react-native-jitsimeet-custom (2.4.5):
-    - JitsiMeetSDK (= 6.0.0)
+    - JitsiMeetSDK (= 6.2.2)
     - React-Core
   - React-perflogger (0.68.3)
   - React-RCTActionSheet (0.68.3):
@@ -534,8 +534,8 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
   glog: 476ee3e89abb49e07f822b48323c51c57124b572
-  JitsiMeetSDK: eb005a7fdc61cd8ec0144dacef9a85738808bd6c
-  JitsiWebRTC: 873becc5a3edd1adebe86303ee5d36aab4f7fcc3
+  JitsiMeetSDK: afd014218306fd1a41f7a01fe995ad9a861f2f5f
+  JitsiWebRTC: f441eb0e2d67f0588bf24e21c5162e97342714fb
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
@@ -552,7 +552,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: a5043e9e1e1bd13b80b58b228c6901b3721a4f54
   React-jsinspector: 86e89b9f135787a2e8eb74b3fc00ec61e9a80ae1
   React-logger: f790bd10f86b38012e108fb4b564023602702270
-  react-native-jitsimeet-custom: adb5e00899a540ef33d31246971b0a2d8d82a0aa
+  react-native-jitsimeet-custom: ff87a505bf258b9d2d3f6835490ff84fec31a475
   React-perflogger: fa15d1d29ff7557ee25ea48f7f59e65896fb3215
   React-RCTActionSheet: e83515333352a3cc19c146e3c7a63a8a9269da8f
   React-RCTAnimation: 8032daa2846e3db7ac28c4c5a207d0bfb5e1e3ad
