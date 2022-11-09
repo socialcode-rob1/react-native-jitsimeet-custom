@@ -13,7 +13,7 @@ Jitsi Meet Native SDKs Implemented
 
 | iOS SDK | Android SDK |
 |---------|-------------|
-| 6.0.0   | 6.0.0       |
+| 6.2.2   | 6.2.2       |
 
 https://jitsi.github.io/handbook/docs/intro 
 
