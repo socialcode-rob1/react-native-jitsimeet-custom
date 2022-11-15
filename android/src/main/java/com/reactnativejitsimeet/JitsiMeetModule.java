@@ -121,6 +121,17 @@ public class JitsiMeetModule extends ReactContextBaseJavaModule {
       }
     }
 
+    // Set the config overrides
+    if (options.hasKey("configOverrides")) {
+      ReadableMap configOverrides = options.getMap("configOverrides");
+      ReadableMapKeySetIterator iterator = configOverrides.keySetIterator();
+      while (iterator.hasNextKey()) {
+        String flag = iterator.nextKey();
+        Boolean value = configOverrides.getBoolean(flag);
+        builder.setConfigOverride(flag, value);
+      }
+    }
+
     JitsiMeetActivityExtended.launchExtended(getReactApplicationContext(), builder.build());
 
     this.registerOnConferenceTerminatedListener(onConferenceTerminated);
