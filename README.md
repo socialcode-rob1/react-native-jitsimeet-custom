@@ -53,6 +53,9 @@ const conferenceOptions = {
   featureFlags: {
     'live-streaming.enabled': false,
   },
+  configOverrides: {
+    'breakoutRooms.hideAddRoomButton': true,
+  },
 };
 
 function App() {
