@@ -56,6 +56,12 @@ struct JitsiMeetUtil {
       for (flag, value) in featureFlags {
         builder.setFeatureFlag(flag as! String, withValue: value)
       }
+
+      // Set the config overrides 
+      let configOverrides = options.value(forKey: "configOverrides") as! NSDictionary
+      for (flag, value) in configOverrides {
+        builder.setConfigOverride(flag as! String, withValue: value)
+      }
     }
   }
 }
