@@ -12,14 +12,14 @@ class JitsiMeet: NSObject {
     
   @objc func launchJitsiMeetView(_ options: NSDictionary, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
     DispatchQueue.main.async {
-      let rootViewController = UIApplication.shared.delegate?.window??.rootViewController as! UINavigationController
+      let rootViewController = UIApplication.shared.delegate?.window??.rootViewController as! UIViewController
       let _vc = JitsiMeetViewController()
       
       _vc.resolver = resolve
       _vc.modalPresentationStyle = .fullScreen
       _vc.conferenceOptions = JitsiMeetUtil.buildConferenceOptions(options)
                 
-      rootViewController.pushViewController(_vc, animated: false)
+      rootViewController.present(_vc, animated: false)
         
         self.vc = _vc
     }

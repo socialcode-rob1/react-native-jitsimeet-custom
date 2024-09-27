@@ -33,14 +33,15 @@ class JitsiMeetViewController: UIViewController {
 
 extension JitsiMeetViewController: JitsiMeetViewDelegate {
   func ready(toClose data: [AnyHashable : Any]!) {
-    DispatchQueue.main.async {
-        let rootViewController = UIApplication.shared.delegate?.window??.rootViewController as! UINavigationController
-        rootViewController.popViewController(animated: false)
-    }
-      
     if ((resolver) != nil) {
       resolver!([])
       resolver = nil
     }
+  }
+  
+  func conferenceTerminated(_ data: [AnyHashable : Any]!) {
+      DispatchQueue.main.async {
+          self.dismiss(animated: false)
+      }
   }
 }
