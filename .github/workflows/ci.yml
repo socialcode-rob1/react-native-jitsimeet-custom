@@ -1,0 +1,99 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  install-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: dependencies-${{ hashFiles('package.json') }}
+          restore-keys: |
+            dependencies-
+
+      - name: Restore example dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: example/node_modules
+          key: dependencies-example-${{ hashFiles('example/package.json') }}
+          restore-keys: |
+            dependencies-example-
+
+      - name: Install dependencies
+        run: |
+          yarn install --cwd example --frozen-lockfile
+          yarn install --frozen-lockfile
+
+      - name: Save dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: dependencies-${{ hashFiles('package.json') }}
+
+      - name: Save example dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: example/node_modules
+          key: dependencies-example-${{ hashFiles('example/package.json') }}
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: install-dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Lint files
+        run: |
+          yarn lint
+
+  typescript:
+    runs-on: ubuntu-latest
+    needs: install-dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Typecheck files
+        run: |
+          yarn typescript
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    needs: install-dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run unit tests
+        run: |
+          yarn test --coverage
+
+      - name: Upload coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+
+  build-package:
+    runs-on: ubuntu-latest
+    needs: install-dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build package
+        run: |
+          yarn prepare
