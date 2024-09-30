@@ -21,6 +21,9 @@ https://cocoapods.org/pods/JitsiMeetSDK
 
 https://github.com/jitsi/jitsi-meet-sdk-samples
 
+# Supported RN version
+0.71 and above
+
 ## Install
 
 ```sh
