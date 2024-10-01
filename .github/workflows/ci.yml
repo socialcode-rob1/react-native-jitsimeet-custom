@@ -17,77 +17,17 @@ jobs:
         node-version: [18.x]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-
-      - name: Restore workspace cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            example/node_modules
-          key: dependencies-${{ runner.os }}-${{ hashFiles('package.json') }}
-          restore-keys: |
-            dependencies-${{ runner.os }}-
-
-      - name: Install dependencies (example)
-        run: yarn install --cwd example --frozen-lockfile
-
-      - name: Install dependencies (root)
-        run: yarn install --frozen-lockfile
-
-      - name: Save workspace
-        uses: actions/upload-artifact@v3
-        with:
-          name: workspace
-          path: .
-
-
-Here’s how you can convert the provided CircleCI configuration to a GitHub Actions workflow while ensuring that the build script uses Node.js 18.
-
-Key Changes:
-Node.js Version: Updated to use Node.js 18.
-Caching: GitHub Actions uses actions/cache for caching dependencies.
-Workspace Management: Instead of attach_workspace, the workspace management is handled natively by GitHub Actions.
-GitHub Actions Workflow (.github/workflows/ci.yml)
-yaml
-Copy code
-name: Build and Test
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  install-dependencies:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
-    steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
 
       - name: Restore workspace cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -103,7 +43,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Save workspace
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: workspace
           path: .
@@ -117,13 +57,13 @@ jobs:
 
     steps:
       - name: Download workspace
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: workspace
           path: .
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -139,13 +79,13 @@ jobs:
 
     steps:
       - name: Download workspace
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: workspace
           path: .
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -161,13 +101,13 @@ jobs:
 
 #     steps:
 #       - name: Download workspace
-#         uses: actions/download-artifact@v3
+#         uses: actions/download-artifact@v4
 #         with:
 #           name: workspace
 #           path: .
 
 #       - name: Set up Node.js
-#         uses: actions/setup-node@v3
+#         uses: actions/setup-node@v4
 #         with:
 #           node-version: ${{ matrix.node-version }}
 
@@ -175,7 +115,7 @@ jobs:
 #         run: yarn test --coverage
 
 #       - name: Upload coverage
-#         uses: actions/upload-artifact@v3
+#         uses: actions/upload-artifact@v4
 #         with:
 #           name: coverage
 #           path: coverage
@@ -189,7 +129,7 @@ jobs:
 
     steps:
       - name: Download workspace
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: workspace
           path: .

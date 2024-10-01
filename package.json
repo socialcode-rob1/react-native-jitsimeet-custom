@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/socialcode-rob1/react-native-jitsimeet-custom#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/socialcode-rob1",
+    "@socialcode-rob1:registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "devDependencies": {
